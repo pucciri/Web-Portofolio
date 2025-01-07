@@ -233,7 +233,8 @@ section .title::after {
     cursor: pointer;
     transition: background 0.3s ease;
     margin: 10px;
-    width: calc(33.33% - 20px);
+    width: 300px;
+    flex: 0 1 auto;
 }
 
 .projects .project-content .card:hover {
@@ -610,4 +611,33 @@ button.prev {
 }
 button.next {
     right: 10px;
+}
+
+.filter {
+    position: relative; /* Mengubah posisi menjadi relative untuk tetap di dalam box projek */
+    background-color: #34495e; /* Warna latar belakang yang lebih lembut */
+    padding: 15px; /* Ruang di dalam elemen */
+    z-index: 1000; /* Menjaga elemen di atas konten lainnya */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek visual */
+    border-radius: 5px; /* Sudut membulat untuk tampilan yang lebih halus */
+    margin-bottom: 20px; /* Jarak bawah untuk memisahkan dari konten di bawah */
+    width: 100%; /* Atur lebar untuk mengisi box projek */
+    height: auto; /* Atur tinggi sesuai konten */
+}
+
+.filter select {
+    padding: 10px; /* Ruang di dalam dropdown */
+    border: 1px solid #ccc; /* Garis batas */
+    border-radius: 5px; /* Sudut membulat untuk dropdown */
+    font-size: 16px; /* Ukuran font */
+    background-color: #ffffff; /* Warna latar belakang dropdown */
+    cursor: pointer; /* Menunjukkan bahwa ini dapat diklik */
+}
+
+.filter select:hover {
+    border-color: #007bff; /* Warna batas saat hover */
+}
+
+.filter select option {
+    font-size: 16px; /* Tetapkan ukuran font untuk opsi */
 }
